@@ -51,3 +51,25 @@ Array.prototype.lastIndexOf = function(searchElement, index=0)
 	return i
 	}	
 }
+//////////////////////////////
+String.prototype.slice = function(beginSlice, endSlice=0)
+{
+	beginSlice -= 0
+	endSlice -=0
+	var str = ""
+
+	if (beginSlice < 0)
+		beginSlice = this.length + beginSlice
+
+	if(endSlice < 0)
+		endSlice = this.length - endSlice
+
+	if(endSlice == 0)
+		endSlice = this.length
+
+	for (var i = beginSlice; i < endSlice; i++) 
+	{
+		str += this[i]
+	}
+	return str
+}
