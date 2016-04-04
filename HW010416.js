@@ -73,3 +73,24 @@ String.prototype.slice = function(beginSlice, endSlice=0)
 	}
 	return str
 }
+/////////////////////
+String.prototype.indexOf = function(substr, indexFrom = 0)
+{
+	substr +=""
+	indexFrom -= 0
+
+	if(indexFrom < 0) 
+		indexFrom = 0
+
+	if(indexFrom >= this.length && substr != "")
+		return -1
+
+	if(substr.length == this.length)
+		return this
+
+	for (var i = indexFrom; i < this.length; i++) 
+		 
+		 for(var j = 0; j < substr.length; j++)
+		 	if (this[i] === substr[j]) 
+	return i
+}
